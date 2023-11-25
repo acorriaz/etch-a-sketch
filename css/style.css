@@ -7,6 +7,7 @@
 body {
   height: 100vh;
   height: 100dvh;
+  font-family: "Lato", sans-serif;
   display: flex;
 }
 
@@ -32,14 +33,41 @@ body {
   gap: 40px;
 }
 
+.color-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 button {
-  width: 100px;
-  height: 36px;
+  width: 130px;
+  padding: 16px;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #191919;
+  font-weight: 400;
+  font-style: italic;
+  color: #fffdfb;
+}
+
+button:hover {
+  opacity: 0.4;
+  transition: all 1s ease;
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.dimension {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .right-side {
@@ -59,6 +87,7 @@ button {
   display: flex;
   flex-direction: column;
   flex: 1;
+  background-color: rgba(46, 46, 46, 20%);
 }
 
 .grid-parent {
@@ -71,5 +100,60 @@ button {
 }
 
 .border {
-  border: 1px solid lightgray;
+  border: 1px solid #00000020;
+}
+
+.active {
+  background-color: white;
+  color: #191919;
+  transition: all 2s ease;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Change Button Input */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #191919;
+  height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: 2px;
+  background-color: #fffdfb;
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid #19191940;
+  border-radius: 50%;
+}
+
+/* Color Picker */
+
+.color-picker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.color-picker::-webkit-color-swatch {
+  border-radius: 15px;
+  border: 1px solid #191919;
+}
+.color-picker::-moz-color-swatch {
+  border-radius: 15px;
+  border: none;
 }
