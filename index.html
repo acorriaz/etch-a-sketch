@@ -4,27 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <title>Etch-a-Sketch</title>
   </head>
   <body>
     <div class="wrapper">
-      <h1>ETCH-a-SKETCH</h1>
+      <h1>ETCH - A - SKETCH</h1>
       <div class="content-container">
         <div class="left-side">
-          <label for="color">color</label>
-          <input id="color" class="color-picker" type="color" />
+          <div class="color-mode">
+            <div class="color-picker-container">
+              <div class="color-picker-indicator"></div>
+              <input
+                id="color"
+                class="color-picker"
+                type="color"
+                value="#f7ecc5"
+              />
+            </div>
+            <button class="rainbow">Rainbow Mode</button>
+            <button class="bw">BW</button>
+          </div>
           <button class="eraser">Eraser</button>
           <button class="clear">Clear</button>
-          <button class="border-toggle">Border</button>
+          <button class="border-toggle">Grid</button>
           <div class="input-container">
-            <label for="input-range" class="dimension">16x16</label>
+            <label for="input-range" class="dimension"></label>
             <input
               id="input-range"
               class="dimension-input"
               type="range"
               value="16"
-              min="1"
+              min="2"
               max="64"
             />
           </div>
